@@ -27,7 +27,7 @@ This mode can be useful for debugging shellcode; add an `int3` to your assembly,
 
 ### Process Injection
 
-Provide a process ID with `-p`. The process must be one you either created or otherwise have the writes to mess with. I tested with notepad, grabbing its PID from task manager.
+Provide a process ID with `-p`. The process must be one you either created or otherwise have the rights to mess with. I tested with notepad, grabbing its PID from task manager.
 
 The following APIs are invoked to run the shellcode inside the target process:
 
