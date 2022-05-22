@@ -25,7 +25,7 @@ This is the default option if `-p` or `-e` are not specified. The following APIs
 
 This mode can be useful for debugging shellcode; add an `int3` to your assembly, attach to the runner process and go!
 
-## Process Injection
+### Process Injection
 
 Provide a process ID with `-p`. The process must be one you either created or otherwise have the writes to mess with. I tested with notepad, grabbing its PID from task manager.
 
@@ -38,7 +38,7 @@ The following APIs are invoked to run the shellcode inside the target process:
 
 The shellcode runner (this go project) doesn't need to be kept alive in this mode, and so will exit.
 
-## Process Hollowing
+### Process Hollowing
 
 Provide an executable path with `-e` - I tested using svchost, with the path `c:\\windows\\system32\\svchost.exe`. svchost in particular, if not run as system, will immediately exit when run. But process hollowing launches it suspended and then replaces its code with the shellcode, like a parasite :D
 
